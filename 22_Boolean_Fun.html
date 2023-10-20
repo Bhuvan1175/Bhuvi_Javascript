@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var boolTrue = new Boolean(true);  // Creates a Boolean object with the value true
+        var boolFalse = new Boolean(false); // Creates a Boolean object with the value false
+
+        // Checking the type and value of boolean objects
+        console.log(typeof boolTrue); // "object"
+        console.log(boolTrue.valueOf()); // true (actual boolean value)
+
+        console.log(typeof boolFalse); // "object"
+        console.log(boolFalse.valueOf()); // false (actual boolean value)
+
+        var str = "Hello";
+        var num = 42;
+        var obj = { key: "value" };
+
+        var boolStr = new Boolean(str);
+        var boolNum = new Boolean(num);
+        var boolObj = new Boolean(obj);
+
+        console.log(boolStr.valueOf()); // true (non-empty string is truthy)
+        console.log(boolNum.valueOf()); // true (non-zero number is truthy)
+        console.log(boolObj.valueOf()); // true (non-empty object is truthy)
+
+
+        var boolTrueLiteral = true;
+        var boolFalseLiteral = false;
+
+        console.log(boolTrueLiteral); // true
+        console.log(boolFalseLiteral); // false
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Method</title>
+</head>
+
+<body>
+    <script>
+        //Concatination
+        const text1 = "Bhuvi";
+        const text2 = "Bagde";
+        const add = text1.concat(" ", text2)
+        document.write("My Name is " + add);
+
+        //Compare
+        const str1 = "Bhuvi";
+        const str2 = "Ram";
+        const see = str1.localeCompare(str2);
+        document.write("See :" + see)
+
+        //toUpperCase
+        const str3 = "hello mama";
+        const capital = str3.toUpperCase();
+        document.write("Str3 in capital :" + capital);
+
+        //charAt
+        const str4 = "Bhuvi bhai";
+        const presence = str4.charAt(5);
+        console.log(presence); // Output: "b"
+
+        //length
+        const size=str4.length;
+        console.log("Length Of String :"+size);
+
+    </script>
+
+</body>
+
+</html>
