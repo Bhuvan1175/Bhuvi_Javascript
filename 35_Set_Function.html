@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Creating a new Set
+        let mySet = new Set();
+
+        // Adding elements to the Set using add()
+        mySet.add("apple");
+        mySet.add("banana");
+        mySet.add("orange");
+
+        // Displaying the initial set and its size
+        console.log("Initial Set:", mySet);
+        console.log("Size of the Set:", mySet.size);
+
+        // Checking if an element is in the Set using has()
+        console.log("Does the Set have 'banana'?", mySet.has("banana")); // true
+        console.log("Does the Set have 'grape'?", mySet.has("grape"));   // false
+
+        // Deleting an element from the Set using delete()
+        mySet.delete("apple");
+
+        // Displaying the Set after deletion and its updated size
+        console.log("Set after deleting 'apple':", mySet);
+        console.log("Size of the Set after deletion:", mySet.size);
+
+        // Clearing all elements from the Set using clear()
+        mySet.clear();
+
+        // Displaying the Set after clearing and its size
+        console.log("Set after clearing:", mySet);
+        console.log("Size of the Set after clearing:", mySet.size);
+
+    </script>
+</body>
+
+</html>

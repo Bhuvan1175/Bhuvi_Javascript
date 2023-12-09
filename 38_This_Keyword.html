@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Example 1: this in Global Scope
+        console.log(this); // In the global scope, this refers to the global object (window in browsers, global in Node.js)
+
+        // Example 2: this in a Function
+        function displayThis() {
+            console.log(this);
+        }
+
+        displayThis(); // When called as a standalone function, this refers to the global object
+
+        // Example 3: this in an Object Method
+        const myObject = {
+            property: "I am a property",
+            displayProperty: function () {
+                console.log(this.property);
+            }
+        };
+
+        myObject.displayProperty(); // this refers to the object (myObject) calling the method
+
+        // Example 4: this in an Event Handler
+        const button = document.getElementById("myButton");
+        button.addEventListener("click", function () {
+            console.log(this); // this refers to the DOM element that triggered the event (button)
+        });
+
+        // Example 5: this in Constructor Function
+        function Person(name) {
+            this.name = name;
+            this.sayHello = function () {
+                console.log("Hello, my name is " + this.name);
+            };
+        }
+
+        const person1 = new Person("John");
+        const person2 = new Person("Alice");
+
+        person1.sayHello(); // this refers to person1
+        person2.sayHello(); // this refers to person2
+
+    </script>
+</body>
+
+</html>

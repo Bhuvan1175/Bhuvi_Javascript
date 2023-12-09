@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function to find the greatest number among three numbers
+        function findGreatestNumber(num1, num2, num3) {
+            if (num1 >= num2 && num1 >= num3) {
+                return num1;
+            } else if (num2 >= num1 && num2 >= num3) {
+                return num2;
+            } else {
+                return num3;
+            }
+        }
+
+        // Example usage
+        var number1 = 23;
+        var number2 = 45;
+        var number3 = 12;
+
+        var greatestNumber = findGreatestNumber(number1, number2, number3);
+
+        console.log("The greatest number among", number1 + ",", number2 + ",", "and", number3, "is:", greatestNumber);
+
+    </script>
+</body>
+
+</html>

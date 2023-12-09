@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Creating a new Map
+        let myMap = new Map();
+
+        // Adding key-value pairs to the Map using set()
+        myMap.set("name", "John");
+        myMap.set("age", 25);
+        myMap.set("city", "New York");
+
+        // Displaying the initial map and its size
+        console.log("Initial Map:", myMap);
+        console.log("Size of the Map:", myMap.size);
+
+        // Retrieving values from the Map using get()
+        console.log("Name:", myMap.get("name")); // John
+        console.log("Age:", myMap.get("age"));   // 25
+        console.log("Country:", myMap.get("country")); // undefined
+
+        // Checking if a key is present in the Map using has()
+        console.log("Does the Map have 'city'?", myMap.has("city"));   // true
+        console.log("Does the Map have 'country'?", myMap.has("country")); // false
+
+        // Deleting a key-value pair from the Map using delete()
+        myMap.delete("age");
+
+        // Displaying the Map after deletion and its updated size
+        console.log("Map after deleting 'age':", myMap);
+        console.log("Size of the Map after deletion:", myMap.size);
+
+        // Clearing all key-value pairs from the Map
+        myMap.clear();
+
+        // Displaying the Map after clearing and its size
+        console.log("Map after clearing:", myMap);
+        console.log("Size of the Map after clearing:", myMap.size);
+
+    </script>
+</body>
+
+</html>

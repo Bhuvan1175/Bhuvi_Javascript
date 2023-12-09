@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function divideNumbers(a, b) {
+            try {
+                // Attempt to perform the division
+                if (b === 0) {
+                    // Throw an exception if the divisor is zero
+                    throw new Error("Division by zero is not allowed");
+                }
+                return a / b;
+            } catch (error) {
+                // Handle the exception
+                console.error("Error:", error.message);
+            } finally {
+                // This block is always executed, regardless of whether an exception occurred or not
+                console.log("Division operation completed");
+            }
+        }
+
+        // Example usage
+        console.log("Result:", divideNumbers(10, 2));  // Result: 5
+        console.log("Result:", divideNumbers(8, 0));   // Error: Division by zero is not allowed
+        // Division operation completed
+        console.log("Result:", divideNumbers(15, 3));  // Result: 5
+
+    </script>
+</body>
+
+</html>

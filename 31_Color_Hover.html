@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Events Example</title>
+  <style>
+    #hoverElement {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mouse Events Example</h1>
+
+  <div id="hoverElement"
+       onmouseover="changeColor('red')"
+       onmouseout="changeColor('lightblue')">
+    Hover me!
+  </div>
+
+  <script>
+    function changeColor(color) {
+      // Get the element by ID
+      var hoverElement = document.getElementById('hoverElement');
+      
+      // Change the background color
+      hoverElement.style.backgroundColor =color;
+    }
+  </script>
+
+</body>
+</html>

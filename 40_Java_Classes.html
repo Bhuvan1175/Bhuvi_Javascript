@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Define a class called 'Person'
+        class Person {
+            // Constructor to initialize object properties
+            constructor(firstName, lastName, age) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+            }
+
+            // Method to get the full name of the person
+            getFullName() {
+                return `${this.firstName} ${this.lastName}`;
+            }
+
+            // Method to check if the person is an adult
+            isAdult() {
+                return this.age >= 18;
+            }
+        }
+
+        // Create instances (objects) of the Person class
+        const person1 = new Person("John", "Doe", 25);
+        const person2 = new Person("Jane", "Smith", 17);
+
+        // Access properties and call methods of the objects
+        console.log(person1.getFullName()); // Output: "John Doe"
+        console.log(person2.isAdult());      // Output: false
+
+    </script>
+
+</body>
+
+</html>
