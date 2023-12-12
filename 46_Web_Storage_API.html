@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage Example</title>
+</head>
+<body>
+
+<h1>User Preferences</h1>
+
+<label for="theme">Choose a theme:</label>
+<select id="theme" onchange="savePreference()">
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+</select>
+
+<script>
+    // Function to save user preference to localStorage
+    function savePreference() {
+        const themePreference = document.getElementById('theme').value;
+        localStorage.setItem('theme', themePreference);
+    }
+
+    // Function to retrieve user preference from localStorage
+    function loadPreference() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.getElementById('theme').value = savedTheme;
+        }
+    }
+
+    // Load user preference when the page loads
+    window.onload = loadPreference;
+</script>
+
+</body>
+</html>

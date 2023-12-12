@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Style</title>
+</head>
+<body>
+
+    <p id="changeableText">This is some text that will change style.</p>
+    <button onclick="changeStyle()">Change Style</button>
+
+    <script>
+        function changeStyle() {
+            // Get the element by its ID
+            var textElement = document.getElementById("changeableText");
+
+            // Change text color to red
+            textElement.style.color = "red";
+
+            // Change font size to 20px
+            textElement.style.fontSize = "20px";
+        }
+    </script>
+
+</body>
+</html>

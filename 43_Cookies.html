@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Example</title>
+</head>
+<body>
+
+  <h1>Cookie Example</h1>
+
+  <button onclick="setCookie()">Set Cookie</button>
+  <button onclick="getCookie()">Get Cookie</button>
+  <button onclick="deleteCookie()">Delete Cookie</button>
+
+  <script>
+    function setCookie() {
+      // Set a cookie with a key-value pair and optional attributes
+      document.cookie = "exampleCookie=Hello, this is a cookie; expires=Fri, 31 Dec 2022 23:59:59 GMT; path=/";
+      alert("Cookie set successfully!");
+    }
+
+    function getCookie() {
+      // Retrieve all cookies
+      var allCookies = document.cookie;
+
+      // Display all cookies in an alert
+      alert("All Cookies:\n" + allCookies);
+    }
+
+    function deleteCookie() {
+      // Set the cookie's expiration date to a past time
+      document.cookie = "exampleCookie=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+      alert("Cookie deleted successfully!");
+    }
+  </script>
+
+</body>
+</html>

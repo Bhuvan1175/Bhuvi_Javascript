@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innerHTML Example</title>
+</head>
+<body>
+
+  <h1>innerHTML Example</h1>
+
+  <button onclick="changeContent()">Change Content</button>
+  <div id="contentContainer">Initial content</div>
+
+  <script>
+    function changeContent() {
+      // Get the element by ID
+      var contentContainer = document.getElementById('contentContainer');
+
+      // Change the innerHTML to update the content
+      contentContainer.innerHTML = 'New content <strong>with HTML tags</strong>';
+    }
+  </script>
+
+</body>
+</html
